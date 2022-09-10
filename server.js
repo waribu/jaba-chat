@@ -28,7 +28,7 @@ io.on("connection", (socket) => {
     // Welcome current User
     socket.emit("message", formatMessage(botName, "Welcome to Jaba Chat!"));
 
-    // Brodcast when a user connects
+    // Broadcast when a user connects
     socket.broadcast
       .to(user.room)
       .emit(
